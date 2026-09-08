@@ -1,2 +1,6 @@
 select  email from person group by email
 having count(*)>1;
+
+select e1.name "employee" from employee e1 join employee e2 
+on e1.managerid = e2.id
+where e1.salary > e2.salary; 
