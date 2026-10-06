@@ -1,0 +1,8 @@
+select 
+case
+when e2.unique_id is not null
+then e2.unique_id
+else null
+end as unique_id , e1.name
+from employees e1 left join employeeuni e2
+on e1.eid = e2.eid ;
