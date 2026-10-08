@@ -1,0 +1,1 @@
+select d1.name "department" , e1.name "Employee" ,e1.salary from employee e1 join department d1 on e1.departmentid = d1.id where (e1.departmentid , e1.salary) in (select departmentid, max(salary) from employee group by departmentid );
